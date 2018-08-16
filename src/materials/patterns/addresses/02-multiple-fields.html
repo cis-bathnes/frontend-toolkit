@@ -1,0 +1,62 @@
+---
+notes: |
+    Only use multiple address fields when you know which regions the addresses will come from and can find a format that supports them all. This can be difficult to know if you’re asking for addresses outside the UK.
+
+    **Advantages of multiple fields**
+
+    Multiple fields mean:
+    - you can easily extract and use specific parts of an address (for example, street names or postcodes)
+    - you can give help for individual fields
+    - you can validate each part of the address separately
+    - users can complete the form using their browser’s auto-complete function
+
+    **Disadvantages of multiple fields**
+
+    Multiple fields have these disadvantages:
+    - it’s hard to find a single format that works for all addresses
+    - there’s no guarantee that users will use the fields the way you think they will
+    - users can’t easily paste addresses from their clipboard
+---
+<fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+          <h1 class="govuk-fieldset__heading">
+            What is your address?
+          </h1>
+        </legend>
+      
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-line-1">
+          Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
+        </label>
+          <input class="govuk-input" id="address-line-1" name="address-line-1" type="text">
+        </div>
+      
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-line-2">
+          <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
+        </label>
+          <input class="govuk-input" id="address-line-2" name="address-line-2" type="text">
+        </div>
+      
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-town">
+          Town or city
+        </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text">
+        </div>
+      
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-county">
+          County
+        </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text">
+        </div>
+      
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-postcode">
+          Postcode
+        </label>
+          <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
+        </div>
+      
+      </fieldset>

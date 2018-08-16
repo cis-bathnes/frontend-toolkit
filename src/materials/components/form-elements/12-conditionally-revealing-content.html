@@ -1,0 +1,62 @@
+---
+notes: |
+    - Reveal additional questions, depending on the context
+    - A left border is used to emphasise this supporting information
+---
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+        How do you want to be contacted?
+      </h1>
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="how-contacted-conditional-1" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
+        Email
+      </label>
+      </div>
+      <div class="govuk-radios__conditional" id="conditional-how-contacted-conditional-1">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-email">
+    Email address
+  </label>
+          <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="text">
+        </div>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="how-contacted-conditional-2" name="how-contacted" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-2">
+        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+        Phone
+      </label>
+      </div>
+      <div class="govuk-radios__conditional" id="conditional-how-contacted-conditional-2">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-phone">
+    Phone number
+  </label>
+          <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="text">
+        </div>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="how-contacted-conditional-3" name="how-contacted" type="radio" value="text" data-aria-controls="conditional-how-contacted-conditional-3">
+        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-3">
+        Text message
+      </label>
+      </div>
+      <div class="govuk-radios__conditional" id="conditional-how-contacted-conditional-3">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-text">
+    Mobile phone number
+  </label>
+          <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text" type="text">
+        </div>
+
+      </div>
+    </div>
+  </fieldset>
+</div>

@@ -1,0 +1,26 @@
+.breakout-box{
+  background: $bathnes-grey-3;
+  padding: 15px;
+  border: solid 2px $bathnes-grey-2;
+  margin:20xp 0;
+  @include govuk-media-query($from: tablet){
+    padding:30px;
+    margin: 40px 0;
+  }
+}
+
+.breakout-box-alt-primary, .govuk-panel--confirmation{
+  background: $link-colour;
+  border: solid 2px $link-hover-colour;
+  color: $bathnes-white;
+
+  a{
+    color: $bathnes-white;
+  }
+}
+
+.breakout-box-alt-secondary{
+  background:$button-colour;
+  border: solid 2px $button-hover-colour;
+  color: $bathnes-white;
+}

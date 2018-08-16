@@ -1,0 +1,43 @@
+---
+notes: |
+    If you have to ask about gender, you should:
+    - list the fields in alphabetical order: ‘Female’, ‘Male’, ‘Unspecified’
+    - do research to test that this works for your users
+
+    **Avoid using pronouns**
+
+    You should address the user as ‘you’ where possible and avoid using gendered pronouns like ‘he’ and ‘she’.
+
+    In some cases you may need to use pronouns, for example if your service allows people to jointly apply for something.
+
+    **Don’t use titles to guess gender**
+
+    You shouldn’t guess someone’s gender based on a title because:
+    - some titles aren’t gendered (for example Dr, Rev, Major)
+    - titles can be changed by deed poll to one that’s different from a person’s gender or sex
+---
+
+<form>
+    <div class="form-group">
+        <fieldset>
+
+            <legend>
+                <h1 class="heading-medium">What is your gender?</h1>
+            </legend>
+
+            <div class="multiple-choice">
+                <input id="radio-1" type="radio" name="radio-group" value="Female">
+                <label for="radio-1">Female</label>
+            </div>
+            <div class="multiple-choice">
+                <input id="radio-2" type="radio" name="radio-group" value="Male">
+                <label for="radio-2">Male</label>
+            </div>
+            <div class="multiple-choice">
+                <input id="radio-3" type="radio" name="radio-group" value="Unspecified">
+                <label for="radio-3">Unspecified</label>
+            </div>
+
+        </fieldset>
+    </div>
+</form>

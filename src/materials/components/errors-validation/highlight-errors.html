@@ -1,0 +1,23 @@
+---
+notes: |
+    - Write a message that helps the user to understand why the error occurred and what to do about it
+    - Put the message in the ```<label>``` or ```<legend>``` for the question, after the question text, in red
+    - Use a red border to visually connect the message and the question it belongs to
+    - If the error relates to specific text fields within the question, give these a red border as well
+---
+
+<div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="error-summary">
+    <h2 class="govuk-error-summary__title" id="error-summary-title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list">
+        <li>
+          <a href="#dob-error">Date of birth must be in the past</a>
+        </li>
+        <li>
+          <a href="#postcode-error">Enter a postcode, like AA1 1AA</a>
+        </li>
+      </ul>
+    </div>
+  </div>

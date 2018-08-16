@@ -1,0 +1,48 @@
+---
+notes: |
+    - Show an error summary at the top of the page
+    - Include a heading to alert the user to the error
+    - Link to each of the problematic questions
+---
+
+<div class="govuk-form-group govuk-form-group--error">
+    <fieldset class="govuk-fieldset" aria-describedby="dob-hint dob-error" role="group">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+        <h1 class="govuk-fieldset__heading">
+          What is your date of birth?
+        </h1>
+      </legend>
+      <span id="dob-hint" class="govuk-hint">
+      For example, 31 3 1980
+    </span>
+      <span id="dob-error" class="govuk-error-message">
+      Date of birth must be in the past
+    </span>
+      <div class="govuk-date-input" id="dob">
+        <div class="govuk-date-input__item govuk-date-input__item--day">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="dob-day">
+            Day
+          </label>
+            <input class="govuk-input govuk-date-input__input" id="dob-day" name="dob-day" type="number" value="6" pattern="[0-9]*">
+          </div>
+        </div>
+        <div class="govuk-date-input__item govuk-date-input__item--month">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="dob-month">
+            Month
+          </label>
+            <input class="govuk-input govuk-date-input__input" id="dob-month" name="dob-month" type="number" value="3" pattern="[0-9]*">
+          </div>
+        </div>
+        <div class="govuk-date-input__item govuk-date-input__item--year">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="dob-year">
+            Year
+          </label>
+            <input class="govuk-input govuk-date-input__input" id="dob-year" name="dob-year" type="number" value="2076" pattern="[0-9]*">
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </div>

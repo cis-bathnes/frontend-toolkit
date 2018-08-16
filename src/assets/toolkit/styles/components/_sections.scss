@@ -1,0 +1,31 @@
+//-----------
+// Sections
+//-----------
+
+.section {
+    position: relative;
+    margin: 3em 0;
+}
+
+.section--border-top {
+    border-top: 2px solid $border-colour;
+    padding-top: 3em;
+}
+
+.section--border-bottom {
+    border-bottom: 2px solid $border-colour;
+    padding-bottom: 3em;
+}
+
+.section__heading {
+    @extend .font-medium;
+    @extend .bold;
+    margin-bottom: 1em;
+}
+
+.section-progress {
+    font-size: 2rem;
+    font-weight: 300;
+    display: block;
+    color: $secondary-text-colour;
+}

@@ -1,0 +1,20 @@
+//-----------
+// Form
+//-----------
+
+.form-title {
+    margin-top: 15px;
+    margin-bottom: 35px;
+}
+
+.form-group, .form-group-related {
+    input + input {
+        margin-top: 10px;
+    }
+    fieldset input {
+        margin-bottom: 10px;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,35 @@
+---
+notes: |
+    An address lookup (sometimes called a ‘postcode lookup’) lets users specify a UK address by entering their postcode (and optionally their street name or number) and selecting their address from a list.
+
+    **Advantages of address lookup**
+
+    Using an address lookup means that:
+    - people entering UK addresses don’t have to enter as much information manually
+    - there’s less chance of mis-typed UK addresses
+
+    **If you use an address lookup**
+
+    When using an address lookup you should:
+    - make it clear that the address lookup only works for UK addresses
+    - provide a manual option for people with international addresses or addresses that are missing or badly formed in the Royal Mail database
+---
+<div class="postcode-search-form" data-module="track-submit" data-track-category="postcodeSearch:local_transaction" data-track-action="postcodeSearchStarted">
+    <form method="post" id="local-locator-form" class="find-location-for-service">
+        <fieldset>
+            <legend class="visuallyhidden">Postcode lookup</legend>
+
+            <div class="ask_location">
+                <label class="form-label" for="postcode">Enter a postcode</label>
+                <span class="form-hint">
+                    For example SW1A 2AA
+                </span>
+                <input class="form-control form-control-1-4" id="postcode" name="postcode" type="text" aria-invalid="false" value="">
+                <button type="submit" class="button">Find</button>
+                <p>
+                    <a target="_blank" id="postcode-finder-link" rel="external" href="http://www.royalmail.com/find-a-postcode">Find a postcode on Royal Mail's postcode finder</a>
+                </p>
+            </div>
+        </fieldset>
+    </form>
+</div>
