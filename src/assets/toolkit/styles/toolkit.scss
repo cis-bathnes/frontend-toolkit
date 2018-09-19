@@ -8,20 +8,9 @@ $path:'../images/';
 @import 'node_modules/govuk-frontend/settings/all';
 @import 'node_modules/govuk-frontend/tools/all';
 @import 'node_modules/govuk-frontend/helpers/all';
-@import "node_modules/govuk-frontend/helpers/clearfix";
-@import "node_modules/govuk-frontend/helpers/colour";
-@import "node_modules/govuk-frontend/helpers/device-pixels";
-@import "node_modules/govuk-frontend/helpers/focusable";
+
 /* Overides govuk Font */
 @import "core/font-faces";
-@import "node_modules/govuk-frontend/helpers/grid";
-@import "node_modules/govuk-frontend/helpers/links";
-@import "node_modules/govuk-frontend/helpers/media-queries";
-@import "node_modules/govuk-frontend/helpers/shape-arrow";
-@import "node_modules/govuk-frontend/helpers/spacing";
-@import "node_modules/govuk-frontend/helpers/typography";
-@import "node_modules/govuk-frontend/helpers/visually-hidden";
-
 @import 'node_modules/govuk-frontend/core/all';
 @import 'node_modules/govuk-frontend/components/back-link/back-link';
 @import 'node_modules/govuk-frontend/components/phase-banner/phase-banner';
@@ -47,9 +36,9 @@ $path:'../images/';
 @import 'node_modules/govuk-frontend/components/table/table';
 @import 'node_modules/govuk-frontend/components/textarea/textarea';
 @import 'node_modules/govuk-frontend/components/warning-text/warning-text';
-
 @import 'node_modules/govuk-frontend/objects/all';
 @import 'node_modules/govuk-frontend/utilities/all';
+@import "node_modules/govuk-frontend/overrides/all";
 
 @import 'components/footer';
 @import 'components/aside';
@@ -60,6 +49,5 @@ $path:'../images/';
 @import 'components/extend';
 @import 'components/colours';
 @import 'components/check_your_answers';
-
-
+@import 'components/panel';
 @import 'core/lists';
