@@ -22,7 +22,6 @@ $path:'../images/';
 @import "node_modules/govuk-frontend/helpers/typography";
 @import "node_modules/govuk-frontend/helpers/visually-hidden";
 
-
 @import 'node_modules/govuk-frontend/core/all';
 @import 'node_modules/govuk-frontend/components/back-link/back-link';
 @import 'node_modules/govuk-frontend/components/phase-banner/phase-banner';
@@ -59,4 +58,8 @@ $path:'../images/';
 @import 'components/navigation';
 @import 'components/buttons';
 @import 'components/extend';
-@import 'components/colours'
+@import 'components/colours';
+@import 'components/check_your_answers';
+
+
+@import 'core/lists';

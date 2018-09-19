@@ -269,3 +269,65 @@ h4.font-medium {
 		.govuk-template {
 			background-color: #f8f8f8;
 	}
+
+	/* Footer Social Media links  */
+
+
+.social-links a:visited {
+	color: #0b0c0c;
+}
+
+.social-links a:link {
+	color: #0b0c0c;
+}
+
+.listing{
+	border-bottom: solid 3px $bathnes-grey-3;
+	padding:20px 0;
+}
+
+
+.section-list {
+  display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
+	justify-content: space-between;
+	
+	li{	
+		display: flex;
+		flex-direction: column;
+		background-color: #fff;
+		width: 100%;
+
+		@include govuk-media-query($from: tablet){
+			width: 46%;
+		}
+		@include govuk-media-query($from: desktop){
+			width: 23%;
+		}
+	}
+
+	li a.govuk-button.button-task {
+		flex: 1 0 auto;
+	}
+
+	 
+}
+
+@media all and (min-width: 60em) {
+  .section-list li {
+    width: 21%;
+  }
+}
+
+.checkbox-flexbox-row{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	flex-direction: row;
+
+	.govuk-checkboxes__item{
+		width: 43%;
+	}
+}

@@ -112,3 +112,15 @@
     border-bottom: solid 5px $bathnes-grey-4;
     margin-bottom: 20px;
 }
+
+.hero-image-no-overlay{
+    padding: 5%;
+
+    .hero__heading{
+        color:$text-colour;
+    }
+    .govuk-heading-l{
+        color:$text-colour;
+    }
+
+}
