@@ -315,7 +315,11 @@ h4.font-medium {
 	 
 }
 
-@media all and (min-width: 60em) {
+.section-list li{
+	width: 100%;
+}	
+
+@include govuk-media-query($from: mobile) {
   .section-list li {
     width: 21%;
   }
