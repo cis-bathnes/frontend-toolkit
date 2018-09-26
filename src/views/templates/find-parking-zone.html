@@ -1,0 +1,54 @@
+---
+parent_url: section-parking.html
+Parent: Parking & Travel
+
+---
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-full">
+
+{{> breadcrumb }}
+
+<h1 class="govuk-heading-xl">Check eligibility for residents parking</h1>
+
+</div>
+</div>
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds">
+
+<p class="govuk-body">Find out the residents parking zone and permit costs (including visitor permits) for a property in Bath or Keynsham.</p>
+
+<form id="search-postcode" action="find-parking-zone2.html">
+
+<div class="govuk-form-group">
+<label class="govuk-label govuk-label-bold" for="postcode">Post code</label>
+<input class="govuk-input govuk-input--width-10" id="postcode" type="text" name="postcode" />
+<input type="submit" class="govuk-button" value="Find address" style="margin-top: 0;" />
+</div>
+
+</form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$('#search-postcode').submit(function(){
+	if($('#postcode').val().startsWith("BA1")) {
+  		$('#search-postcode').attr("action", "find-parking-zone2.html");
+	}
+	else if($('#postcode').val().startsWith("BA2")) {
+  		$('#search-postcode').attr("action", "find-parking-zone2a.html");
+	}
+	else if($('#postcode').val().startsWith("BS39")) {
+  		$('#search-postcode').attr("action", "find-parking-zone2b.html");
+	}
+	else if($('#postcode').val().startsWith("BA4")) {
+  		$('#search-postcode').attr("action", "find-parking-zone2c.html");
+	}
+	else {
+  		$('#search-postcode').attr("action", "#");
+	}
+});
+</script>
+
+</div>
+</div>
