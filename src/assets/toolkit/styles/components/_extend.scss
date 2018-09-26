@@ -293,35 +293,64 @@ h4.font-medium {
 	margin: 0;
 	padding: 0;
 	justify-content: space-between;
+
+	.govuk-link:focus, a:focus{
+		background:none;
+		border: none;
+		outline: none;
+	}
+
+	.govuk-link:link, a:link{
+		color: white;
+		text-decoration: none;
+	}
+
+	.govuk-link:visited, a:visited{
+		color: white;
+	}
+
+	h2.govuk-heading-s{
+		margin-bottom: 0;
+		padding:20px 0;
+	}
 	
 	li{	
 		display: flex;
 		flex-direction: column;
-		background-color: #fff;
+		background: #00aeef;
 		width: 100%;
-
+		margin-bottom:30px;
+		transition: background 1s;
+		
+		&:hover{
+			background: $button-hover-colour;
+		}
+		
 		@include govuk-media-query($from: tablet){
 			width: 46%;
+		
 		}
 		@include govuk-media-query($from: desktop){
-			width: 23%;
+			width: 24%;
 		}
 	}
 
 	li a.govuk-button.button-task {
 		flex: 1 0 auto;
-	}
-
-	 
+	}	 
 }
 
 .section-list li{
 	width: 100%;
+	background:$button-colour;
 }	
 
-@include govuk-media-query($from: mobile) {
+@include govuk-media-query($from: tablet) {
   .section-list li {
-    width: 21%;
+		width: 23%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
   }
 }
 
