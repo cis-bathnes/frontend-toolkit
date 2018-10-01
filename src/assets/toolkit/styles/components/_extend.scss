@@ -342,12 +342,16 @@ h4.font-medium {
 }	
 
 
-.banes-desktop-only{
+.banes-desktop-only, .banes-desktop-inline-only{
 	display: none;
 }
 
 .banes-mobile-only{
 	display: block;
+}
+
+.banes-mobile-inline-only{
+	display: inline-block;
 }
 
 @include govuk-media-query($from: tablet) {
@@ -359,7 +363,11 @@ h4.font-medium {
 		display: block;
 	}
 
-	.banes-mobile-only{
+	.banes-desktop-inline-only{
+		display: inline-block;
+	}
+
+	.banes-mobile-only, .banes-mobile-inline-only{
 		display: none;
 	}
 
@@ -380,10 +388,4 @@ h4.font-medium {
 	.govuk-checkboxes__item{
 		width: 43%;
 	}
-}
-
-
-
-.banes-mobile-only{
-
 }
