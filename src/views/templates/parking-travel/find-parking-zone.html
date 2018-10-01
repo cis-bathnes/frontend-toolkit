@@ -35,16 +35,16 @@ Breadcrumb2_url: section-residents-parking-permits.html
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 $('#search-postcode').submit(function(){
-	if($('#postcode').val().startsWith("BA1")) {
+	if($('#postcode').val().toUpperCase().startsWith("BA1")) {
   		$('#search-postcode').attr("action", "find-parking-zone2.html");
 	}
-	else if($('#postcode').val().startsWith("BA2")) {
+	else if($('#postcode').val().toUpperCase().startsWith("BA2")) {
   		$('#search-postcode').attr("action", "find-parking-zone2a.html");
 	}
-	else if($('#postcode').val().startsWith("BS39")) {
+	else if($('#postcode').val().toUpperCase().startsWith("BS39")) {
   		$('#search-postcode').attr("action", "find-parking-zone2b.html");
 	}
-	else if($('#postcode').val().startsWith("BA4")) {
+	else if($('#postcode').val().toUpperCase().startsWith("BA4")) {
   		$('#search-postcode').attr("action", "find-parking-zone2c.html");
 	}
 	else {
