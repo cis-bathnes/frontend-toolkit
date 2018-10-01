@@ -325,14 +325,6 @@ h4.font-medium {
 		&:hover{
 			background: $button-hover-colour;
 		}
-		
-		@include govuk-media-query($from: tablet){
-			width: 46%;
-		
-		}
-		@include govuk-media-query($from: desktop){
-			width: 24%;
-		}
 	}
 
 	li a.govuk-button.button-task {
@@ -343,15 +335,40 @@ h4.font-medium {
 .section-list li{
 	width: 100%;
 	background:$button-colour;
+	box-shadow: 0 2px 0 #001a0f;
+	display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }	
+
+
+.banes-desktop-only{
+	display: none;
+}
+
+.banes-mobile-only{
+	display: block;
+}
 
 @include govuk-media-query($from: tablet) {
   .section-list li {
+		width: 48%;  
+	}	
+
+	.banes-desktop-only{
+		display: block;
+	}
+
+	.banes-mobile-only{
+		display: none;
+	}
+
+}
+
+@include govuk-media-query($from: desktop) {
+  .section-list li {
 		width: 23%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
+	}
 }
 
 .checkbox-flexbox-row{
@@ -363,4 +380,10 @@ h4.font-medium {
 	.govuk-checkboxes__item{
 		width: 43%;
 	}
+}
+
+
+
+.banes-mobile-only{
+
 }
