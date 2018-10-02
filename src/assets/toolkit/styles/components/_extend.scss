@@ -518,6 +518,11 @@ h4.font-medium {
 	.govuk-link:link, a:link{
 		color: white;
 		text-decoration: none;
+		color: white;
+    padding: 5px 10px;
+    margin: 0;
+    justify-content: space-around;
+    flex-direction: column;
 	}
 
 	.govuk-link:visited, a:visited{
@@ -526,7 +531,7 @@ h4.font-medium {
 
 	h2.govuk-heading-s{
 		margin-bottom: 0;
-		padding:20px 0;
+		padding:0;
 	}
 	
 	li{	
