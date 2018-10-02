@@ -1,18 +1,20 @@
-<div class="govuk-breadcrumbs">
-                <ol class="govuk-breadcrumbs__list">
-                  <li class="govuk-breadcrumbs__list-item">
-                    <a class="govuk-breadcrumbs__link" href="#">Home</a>
-                  </li>
-                  <li class="govuk-breadcrumbs__list-item">
-                    <a class="govuk-breadcrumbs__link" href="#">Parking &amp; Travel</a>
-                  </li>
-                  <li class="govuk-breadcrumbs__list-item" aria-current="page">Shopmobility</li>
-                </ol>
-              </div>
+---
+layout: default
+Title: Shopmobility
+Breadcrumb1_url: section-parking.html
+Breadcrumb1_title: Parking & Travel
+---
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        {{> breadcrumb.lv-two-breadcrumb}}
+    </div>
+</div>
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">Shopmobility</h1>
+        <h1 class="govuk-heading-xl">{{Title}}</h1>
         <p class="govuk-body-l">Shopmobility is a loan scheme that provides mobility vehicles to help people get around in Bath city centre. If you have limited mobility (even temporarily), the service is available to you regardless of your age or disability.
                 </p>
 
