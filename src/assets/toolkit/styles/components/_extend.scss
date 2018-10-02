@@ -1,3 +1,218 @@
+
+// 
+// Buttons 
+//
+
+
+.button-home{
+	width: 100%;
+	margin:0;
+}
+
+.button-task{
+	width: 90%;
+	min-height: 3.15789em;
+}
+
+
+//-
+// Homepage boxes 
+//-
+
+.hero__description p.govuk-body-l {
+	color: white;
+	padding: 0;
+	margin: -20px 0 10px;
+}
+
+.breakout-box-alt-primary h4.govuk-heading-s,
+.breakout-box-alt-primary h2.govuk-heading-l{
+	color:$bathnes-white;
+}
+
+
+.hero_home {
+	 background-color: $bathnes-primary-ally;
+	 padding:1% 0;
+	 &--alt {
+			 background-color: $bathnes-secondary-ally;
+	 }
+	 &--image {
+			 background-size: cover;
+			 background-repeat: no-repeat;
+			 background-position: center center;
+			 border-bottom: 2px solid $bathnes-primary-ally;
+			 &:after {
+					 position: absolute;
+					 width: 100%;
+					 height: 100%;
+					 top: 0;
+					 left: 0;
+					 background-color: $bathnes-primary-ally;
+			 }
+			 &.hero--alt {
+							 &:after {
+									 background-color: $bathnes-secondary-ally;
+											 }
+									 }
+			 }
+}
+
+
+
+
+@media (min-width: 641px) {
+
+	 .sub-hero {
+			 margin-top: -80px;
+				}
+
+	 .breakout-home{
+			 position: absolute;
+			 top: 0;
+			 left: 66%;
+			 width: 26.33%;
+			 background: rgb(242, 242, 242);
+			 }
+	 }
+
+	 .breakout-box-alt-primary-home {
+		background: $bathnes-primary;
+		margin-top: -40px;
+		}
+	 
+
+
+.container {
+	position: relative;
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+
+.service { 
+	background: #f8f8f8;
+	margin-bottom: 1em;
+	padding: 1em .6em;
+	min-height: 75px;
+	transition: all 1s;
+	 }
+
+
+//- 
+// News and Events section 
+//-
+
+.news-and-events {
+	background: #d8d8d8;
+	padding: 2em 0;
+	}
+
+.news-and-events .card-content {
+	background: #fff;
+	padding: 10px;
+	border-top: solid 5px #00aeef;
+	:hover {
+			color: #fff;
+	background: #00aeef;
+					}
+	}
+
+
+.card-image-wrapper {
+	background-repeat: no-repeat;
+	background-position: center center;
+	min-height: 210px;
+	}
+
+.card-image-wrapper.news {
+	background: url(/assets/patterns/images/sugar-smart-logo.png);
+	background-size: cover;
+	}
+
+	.consultation {
+	background: url(/assets/patterns/images/have-your-say.png);
+	background-size: cover;
+
+	}
+
+	.event {
+	background: url(/assets/patterns/images/events.png);
+	background-size: cover;
+
+	}
+
+
+//-
+// Flexbox
+//-
+
+
+.task-links {
+	background: $bathnes-grey-3;
+	padding: 0 12px;
+	margin: 0 12px;
+}
+
+
+.flex-container {
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-flex-wrap: nowrap;
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+	-webkit-justify-content: flex-start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+	-webkit-align-content: stretch;
+	-ms-flex-line-pack: stretch;
+	align-content: stretch;
+	}
+
+.flex-item:nth-child(1) {
+	-webkit-order: 0;
+	-ms-flex-order: 0;
+	order: 0;
+	-webkit-flex: 0 1 auto;
+	-ms-flex: 0 1 auto;
+	flex: 0 1 auto;
+	-webkit-align-self: auto;
+	-ms-flex-item-align: auto;
+	align-self: auto;
+	}
+
+.flex-item:nth-child(2) {
+	-webkit-order: 0;
+	-ms-flex-order: 0;
+	order: 0;
+	-webkit-flex: 0 1 auto;
+	-ms-flex: 0 1 auto;
+	flex: 0 1 auto;
+	-webkit-align-self: auto;
+	-ms-flex-item-align: auto;
+	align-self: auto;
+	}
+
+.flex-item:nth-child(3) {
+	-webkit-order: 0;
+	-ms-flex-order: 0;
+	order: 0;
+	-webkit-flex: 0 1 auto;
+	-ms-flex: 0 1 auto;
+	flex: 0 1 auto;
+	-webkit-align-self: auto;
+	-ms-flex-item-align: auto;
+	align-self: auto;
+	}
+
+
+
+
+
 // find a car park 
 
 .listing.car-parks {
@@ -388,4 +603,9 @@ h4.font-medium {
 	.govuk-checkboxes__item{
 		width: 43%;
 	}
+}
+
+
+.hero__description {
+	color: #fff;
 }
