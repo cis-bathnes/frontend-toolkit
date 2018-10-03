@@ -1,0 +1,449 @@
+<!--
+This is a LAYOUT file. 
+It removes the primary nav bar from the header. 
+It should be placed in src/views/layouts/
+--->
+
+<!doctype html>
+<html lang="en-GB">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title></title>
+
+	<!-- toolkit styles -->
+	<link rel="stylesheet" href="../assets/patterns/styles/screen.css">
+    <link rel="stylesheet" href="../assets/ui/styles/ui.css">
+	<!-- /toolkit styles -->
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+	<!-- /Font Awesome -->
+
+
+
+  <!-- govuk_elements JS is dependant on jQuery so we've included it here -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../assets/patterns/scripts/vendor/jquery-1.11.0.min.js"><\/script>');</script>
+
+</head>
+<body>
+	<script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+	<div id="skiplink-container">
+    	<div>
+        	<a href="#content" class="skiplink">Skip to main content</a>
+    	</div>
+    </div>
+
+		<!-- Menu show/hide JS -->
+		<!-- Adapted from https://www.w3schools.com/howto/howto_js_toggle_class.asp -->
+		<!-- Need to move into menu.js and that file be imported into app.js -->
+		<script>
+		  function showHideMenu(){
+		  var element = document.getElementById("navigation-primary");
+		
+		  if (element.classList) {
+		      element.classList.toggle("navigation-primary--active");
+		  } else {
+		      // For IE9
+		      var classes = element.className.split(" ");
+		      var i = classes.indexOf("navigation-primary--active");
+		
+		      if (i >= 0)
+		          classes.splice(i, 1);
+		      else
+		          classes.push("navigation-primary--active");
+		          element.className = classes.join(" ");
+		  }
+		}
+		</script>
+		<style>
+		  #global-header {
+		  background-color: #fff;
+		  position: relative;
+		}
+		
+		.header-wrapper {
+		  position: relative;
+		  max-width: 960px;
+		  margin: 0 auto;
+		  padding-top: 1em;
+		  padding-bottom: 1em;
+		  padding-left: 15px;
+		  padding-right: 15px;
+		}
+		@media (min-width: 960px) {
+		  .header-wrapper {
+		    padding-left: 0;
+		    padding-right: 0;
+		  }
+		}
+		
+		.header-global {
+		  overflow: hidden;
+		}
+		
+		.header-logo {
+		  width: 128.4px;
+		  height: auto;
+		}
+		.header-logo img {
+		  max-width: 100%;
+		}
+		@media (min-width: 769px) {
+		  .header-logo {
+		    width: 160.5px;
+		    float: left;
+		  }
+		}
+		
+		.header-search {
+		  margin-top: 10px;
+		  margin-bottom: 20px;
+		}
+		@media (min-width: 769px) {
+		  .header-search {
+		    margin-top: 1em;
+		    float: right;
+		    width: 50%;
+		    text-align: right;
+		    margin-top: 12px;
+		    margin-bottom: 0;
+		  }
+		}
+		.header-search .site-search {
+		  position: relative;
+		}
+		.header-search .site-search .form-control {
+		  width: calc(100% - 80px);
+		  border-width: 1px;
+		  border-color: #bfc1c3;
+		  font-size: 16px;
+		  height: 36px;
+		}
+		@media (min-width: 769px) {
+		  .header-search .site-search .form-control {
+		    width: calc(100% - 100px);
+		  }
+		}
+		.header-search .site-search .button {
+		  position: absolute;
+		  top: 0;
+		  right: 45px;
+		  text-indent: -9999px;
+		  background-image: url(../assets/patterns/images/icon-search-2x.png);
+		  background-repeat: no-repeat;
+		  background-position: 55% 50%;
+		  background-size: 52.5% 40%;
+		  box-shadow: none;
+		  width: 36px;
+		  height: 36px;
+		}
+		@media (min-width: 769px) {
+		  .header-search .site-search .button {
+		    right: 0;
+		  }
+		}
+		
+		.header-search--desktop {
+		  display: none;
+		}
+		@media (min-width: 769px) {
+		  .header-search--desktop {
+		    display: block;
+		  }
+		}
+		
+		@media (min-width: 769px) {
+		  .header-search--mobile {
+		    display: none;
+		  }
+		}
+		
+		#global-header-bar {
+		  position: relative;
+		  background-color: #00aeef;
+		  height: 5px;
+		}
+		
+		.header-marque {
+		  position: absolute;
+		  bottom: 0;
+		  right: 15px;
+		  width: 0;
+		  height: 0;
+		  border-style: solid;
+		  border-width: 25px 0 0 25px;
+		  border-color: transparent transparent transparent #00aeef;
+		}
+		
+		.header-commercial {
+		  position: relative;
+		  overflow: hidden;
+		  background-color: #0b0c0c;
+		}
+		.header-commercial .header-wrapper {
+		  padding-top: 0.75em;
+		  padding-bottom: 0.5em;
+		}
+		
+		.header-commercial__logo {
+		  width: 91.42857px;
+		  height: auto;
+		  display: block;
+		}
+		.header-commercial__logo img {
+		  max-width: 100%;
+		}
+		@media (min-width: 769px) {
+		  .header-commercial__logo {
+		    width: 106.66667px;
+		  }
+		}
+		
+		.header-commercial__marque {
+		  position: absolute;
+		  bottom: 0;
+		  right: 15px;
+		  width: 0;
+		  height: 0;
+		  border-style: solid;
+		  border-width: 30px 0 0 30px;
+		  border-color: transparent transparent transparent #fff;
+		}
+		@media (min-width: 960px) {
+		  .header-commercial__marque {
+		    right: 0;
+		  }
+		}
+		
+		</style>
+		<header role="banner" id="global-header">
+		    <div class="header-wrapper">
+		        <div class="header-global">
+		            <div class="header-logo">
+		                <a href="homepage.html" id="logo" class="content">
+		                    <img src="/assets/patterns/images/logos/bathnes-logo-colour.png" alt="Bath & North East Somerset Council" />
+		                </a>
+		            </div>
+		            <div class="header-search header-search--desktop">
+		                    <p>Find information near you <i class="fa fa-map-marker"></i></p>
+		                <form id="search" class="site-search" action="" method="">
+		                    <label class="form-label visually-hidden" for="search-site">Search across the site</label>
+		                    <input class="form-control" id="search-site" type="text" name="search-site" placeholder="Search bathnes.gov.uk">
+		                    <input class="button" type="submit" value="Search">
+		                </form>
+		            </div>
+		        </div>
+		        <button id="js-header-toggle" class="navigation-trigger" onclick="showHideMenu()">Menu</button>
+		    </div>
+		    <div class="header-marque"></div>
+		</header>
+		<div id="global-header-bar"></div>
+	<main id="content" role="main">
+		
+<div class="breadcrumb">
+    <ol>
+        <li><a aria-current="false" href="homepage.html">Home</a></li>
+        <li><a aria-current="false" href=""></a></li>
+        <li><a aria-current="false" >Free bus pass (Diamond Travelcard)</a></li>
+    </ol>
+</div><div class="grid-row">
+    <div class="column-two-thirds">
+        <h1 class="heading-xlarge">Free bus pass (Diamond Travelcard)</h1>
+        
+        <p class="lede">You’re entitled to a free bus pass if you’re a BANES resident and have reached the qualifying age or have certain disabilities. The bus pass is called a Diamond Travelcard.</p>
+        <h2 class="heading-large">How to apply for a bus pass</h2>
+        <div class="grid-row">
+
+            <div class="column-one-half">
+                <a class="button button-start" href="bus-passes-older-persons.html" role="button">Older person's bus pass</a>
+            </div>
+        
+            <div class="column-one-half">
+                <a class="button button-start" href="bus-passes-disabled.html" role="button">Disabled person's bus pass</a>
+            </div>
+        
+        </div> 
+        <p>&nbsp;</p>
+        <details>
+            <summary><span class="summary">How to use your bus pass</span></summary>
+            <div class="panel panel-border-narrow">
+                <p>You must show your pass to the driver every time you get on a bus. Some bus companies will issue you with a ticket. If so, please keep the ticket until you get off the bus as you may need to show it to an inspector. If you forget to take your pass with you, you must pay the normal fare.</p>
+            </div>
+        </details>
+        <details>
+            <summary><span class="summary">Where and when you can use your bus pass</span></summary>
+            <div class="panel panel-border-narrow">
+                <table summary="Where and when you can use your bus pass">
+                    <thead>
+                        <tr>
+                            <th scope="col">Bus service</th>
+                            <th class="numeric" scope="col"  colspan="2">When you can use your bus pass</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                                <th scope="row">All local bus services in Bath and North East Somerset, Bristol, North Somerset and South Gloucestershire and for travel to places outside those areas</th>
+                                <td class="numeric">From 9am <br />Monday to Friday</td>
+                                <td class="numeric">All day Saturday, Sunday and public holidays</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Local bus services anywhere in England</th>
+                            <td class="numeric">9.30am to 11pm Monday to Friday</td>
+                            <td class="numeric">All day Saturday, Sunday and public holidays</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Park & Ride services in Bath and Bristol</th>
+                            <td class="numeric">From 9am Monday to Friday</td>
+                            <td class="numeric">Not at wekends</td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row">Park &amp; Ride services in many other towns and cities (please check before travelling)</th>
+                            <td class="numeric">From 9.30am Monday to Friday</td>
+                            <td class="numeric">Not at wekends</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+                <h3 class="heading-medium">Bath tour bus services</h3>
+                <p>You can use your bus pass to obtain a free Shuttle ticket to make local journeys between stops along the route. The Shuttle ticket is only valid for seats on the lower deck of the bus. Headphones for the tour commentary will not be provided. The bus pass is not valid for the purchase of sightseeing tickets.</p>
+                <h3 class="heading-medium">Dial-a-Ride services</h3>
+                <p>If you are registered with a <a href="">local Dial-a-Ride group</a>, your bus pass entitles you to discounted fares. For full details, please contact the group.</p>
+                <h3 class="heading-medium">Airport Flyer services</h3>
+                <p>You can use your bus pass for free travel on the A4 route between Bath and the Airport Tavern (except between 4am and 9am on Monday to Friday). However, you’ll be charged a child fare to travel from the Airport Tavern to Bristol Airport.</p>
+                <p>Bus passes are not accepted for free off-peak travel on bus service A1 (Bristol – Bristol Airport).</p>
+                <h3 class="heading-medium">Exclusions</h3>
+                <p>Your bus pass is not valid on:</p>
+                <ul class="list list-bullet">
+                    <li>Bath City Tour or Skyline Tour (except short local journeys)</li>
+                    <li>Bristol Open-Top Tour</li>
+                    <li>Long-distance coach services</li>
+                    <li>Rail and ferry services</li>
+                    <li>Tram, Underground and Metro services</li>
+                    <li> Local bus services in Scotland, Northern Ireland, Isle of Man, Channel Islands and Wales (except for the direct bus service between Bristol or South Gloucestershire and Chepstow, Newport or places in between)</li>
+                    <li>Taxis</li>
+                </ul>
+            </div>
+        </details>
+        <details>
+            <summary><span class="summary">If you lose or damage your pass</span></summary>
+            <div class="panel panel-border-narrow">
+                <p>If you’ve lost your bus pass, it’s a good idea to check with bus operators’ lost property offices if you cannot find it anywhere else. If it is lost, or you have damaged your pass, go to a council One Stop Shop and we’ll cancel it and issue you with a replacement while you wait. There is a non-refundable charge for replacing a lost or damaged pass. If you later find your lost pass, hand it in to a council One Stop Shop.</p>
+            </div>
+        </details>        
+        
+        <details>
+                <summary><span class="summary">If your pass is stolen</span></summary>
+                <div class="panel panel-border-narrow">
+        <p>If your pass has been stolen, the theft must be reported to the police. They will give you a Crime Reference Number which we will need in order to issue a replacement. Stolen passes are cancelled and cannot be used for travel. If your stolen pass is subsequently returned to you, please hand it in at a council One Stop Shop.</p>
+    </div>
+</details> 
+        
+        <details>
+                <summary><span class="summary">Changing the photograph on your bus pass</span></summary>
+                <div class="panel panel-border-narrow">
+        <p>If you need to change the photograph on your bus pass, you can visit a council One Stop Shop to have a new photograph taken. A new pass will be produced with the updated photograph on it. If the reason for the change is because your appearance has changed significantly, then this service is free of charge. Otherwise there will be a charge.</p>
+    </div>
+</details> 
+        
+        
+        <details>
+                <summary><span class="summary">How to re-apply for an older person’s bus pass when it expires</span></summary>
+                <div class="panel panel-border-narrow">
+        <p>Your bus pass is valid for 3 years. If you still live in the Bath and North East Somerset area, we’ll renew your bus pass automatically. If you’ve changed your address in the last 3 years, please ensure that your address held on our Council Tax records is up-to-date. We’ll send your new pass a few weeks before your old pass expires. Please destroy your old pass or return it to a council One Stop Shop.</p>
+        <p>If you haven’t received your new pass 7 days before the expiry of your old one, please visit a council One Stop Shop. We’ll check your details and issue you with a new pass while you wait.</p>
+    </div>
+</details> 
+        
+        <details>
+                <summary><span class="summary">How to re-apply for a disabled person’s bus pass when it expires</span></summary>
+                <div class="panel panel-border-narrow">
+        <p>Your bus pass is valid for 3 years. If you still live in the Bath and North East Somerset area, we’ll need to confirm that you’re still eligible. You’ll receive a letter from us before your bus pass expires. You’ll be asked to visit your nearest council One Stop Shop with evidence that you still have a qualifying disability. We’ll then issue your new pass and you can start using it immediately. Please destroy your old pass or return it to a council One Stop Shop.</p>
+    </div>
+</details>   
+        
+        <h2 class="heading-large">What you need to know</h2>
+        <ul class="list list-bullet">
+            <li>If you allow someone else to use your bus pass, it could be withdrawn</li>
+            <li>Your bus pass gives you no more rights than any other passenger</li>
+            <li>If you move within the council area, tell us your new address as soon as possible</li>
+            <li>If you move out of the council area, you’ll need to apply to your new council for a replacement pass</li>
+            <li>If you no longer require a pass, please return it to a council One Stop Shop</li>
+            <li> If you are applying for several passes on behalf of a group or organisation, you’ll need to make an appointment in advance by emailing <a href="mailto:triage@bathnes.gov.uk>triage@bathnes.gov.uk">triage@bathnes.gov.uk</a></li>
+        </ul>
+
+    </div>
+    
+
+
+        <div class="column-one-third">
+            <div class="aside-container">
+                <aside class="aside" role="complementary">
+                    <h2 class="font-medium">Related tasks</h2>
+
+                    <nav class="aside__nav" role="navigation">
+                        <ul>
+                            <li><a href="bus-passes-disabled.html">Apply for adisabled person’s bus pass</li>
+                            <li><a href="bus-passes-older-persons.html">Apply for an older person’s bus pass</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+            </div>
+        </div>
+
+        </div>
+
+
+	</main>
+
+
+		<footer class="global-footer">
+		    <div class="footer-wrapper">
+		        <div class="grid-row">
+		            <div class="column-two-thirds">
+		                <div class="footer-logo">
+		                    <img src="/assets/patterns/images/logos/bathnes-logo-mono.png" alt="Bath & North East Somerset Council" />
+		                </div>
+		                
+		                <ul class="footer-list">
+		                    <li><a href="#">Accessibility</a></li>
+		                    <li><a href="#">Contact Us</a></li>
+		                    <li><a href="#">Privacy Policy</a></li>
+		                    <li><a href="#">Disclaimer</a></li>
+		                    <li><a href="#">Cookies</a></li>
+		                </ul>
+		                
+		                <ul class="footer-list">
+		                    <li>Copyright © 2018 Bath &amp; North East Somerset Council</li>
+		                </ul>
+		            </div>
+		            
+		            <div class="column-one-thirds">
+		                <h4 class="heading-small">
+		                Social media and newsletter signup</h4>
+		                <ul class="footer-list">
+		                    <li><i class="fa fa-envelope-open fa-3x" aria-hidden="true"></i> </li>
+		                    <li><i class="fa fa-facebook fa-3x" aria-hidden="true"></i></li>
+		                    <li><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></li>
+		                    <li><i class="fa fa-youtube fa-3x" aria-hidden="true"></i></li>
+		                    <li><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></li>
+		                </ul>
+		            </div>
+		            
+		        </div>
+		    </div>
+		</footer>
+	<!-- toolkit scripts -->
+		<script src="../assets/patterns/scripts/app.js"></script>
+	<!-- /toolkit scripts -->
+
+	<!-- if no GOVUK-namespaced module has loaded we can assume JS has failed and remove the class !-->
+	<!-- <script>if (typeof window.GOVUK === 'undefined') document.body.className = document.body.className.replace('js-enabled', '');</script> -->
+</body>
+</html>
