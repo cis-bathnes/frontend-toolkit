@@ -623,12 +623,14 @@ h4.font-medium {
 	top: 32px;
 }
 
-.banes-tel {
-	font-weight: bold;
+
+@include govuk-media-query($from: tablet) {
+	.govuk-list a[href*="tel:"],
+	a[href*="tel:"]
+	{
+		pointer-events:none;
+		color: $text-colour;
+		font-weight: 700;
+		text-decoration: none;
+	}
 }
-
-.banes-tel--weak {
-	font-weight: normal;
-}
-
-
