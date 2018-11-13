@@ -4,6 +4,61 @@ Title: Community transport directory
 Breadcrumb1_url: section-parking.html
 Breadcrumb1_title: Parking & Travel
 ---
+<script>
+
+function show1(){
+  document.getElementById('bath-ct').style.display ='block';
+  document.getElementById('clear-filter').style.display ='block';
+  document.getElementById('keynsham-ct').style.display ='none';
+   document.getElementById('midsomer-norton-ct').style.display ='none';
+   document.getElementById('chew-ct').style.display = 'none';
+   document.getElementById('other-ct').style.display = 'none';
+   document.getElementById('all-ct').style.display = 'none';
+}
+
+function show2(){
+  document.getElementById('keynsham-ct').style.display = 'block';
+  document.getElementById('clear-filter').style.display ='block';  
+  document.getElementById('bath-ct').style.display ='none';
+  document.getElementById('midsomer-norton-ct').style.display ='none';
+  document.getElementById('chew-ct').style.display = 'none';
+  document.getElementById('other-ct').style.display = 'none';
+  document.getElementById('all-ct').style.display = 'none';
+}
+
+function show3(){
+  document.getElementById('midsomer-norton-ct').style.display = 'block';
+  document.getElementById('clear-filter').style.display ='block';
+  document.getElementById('bath-ct').style.display ='none';
+  document.getElementById('keynsham-ct').style.display ='none';
+  document.getElementById('chew-ct').style.display = 'none';
+  document.getElementById('other-ct').style.display = 'none';
+  document.getElementById('all-ct').style.display = 'none';
+}
+
+function show4(){
+  document.getElementById('chew-ct').style.display = 'block';
+  document.getElementById('clear-filter').style.display ='block';
+  document.getElementById('bath-ct').style.display ='none';
+  document.getElementById('keynsham-ct').style.display ='none';
+  document.getElementById('midsomer-norton-ct').style.display ='none';
+  document.getElementById('other-ct').style.display = 'none';
+  document.getElementById('all-ct').style.display = 'none';
+}
+
+function show5(){
+  document.getElementById('other-ct').style.display = 'block';
+  document.getElementById('clear-filter').style.display ='block';
+  document.getElementById('bath-ct').style.display ='none';
+  document.getElementById('keynsham-ct').style.display ='none';
+  document.getElementById('midsomer-norton-ct').style.display ='none';
+  document.getElementById('chew-ct').style.display = 'none';
+  document.getElementById('all-ct').style.display = 'none';
+
+
+}
+
+  </script>
 
 
 <div class="govuk-grid-row">
@@ -14,154 +69,483 @@ Breadcrumb1_title: Parking & Travel
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-            <h1 class="govuk-heading-xl">{{Title}}</h1>
-            <h2 class="govuk-heading-l">Just show me schemes that cover</h2>
-            
+
             <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-                <div class="govuk-checkboxes checkbox-flexbox-row">
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
-                    <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+                    <fieldset class="govuk-fieldset">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                        <h1 class="govuk-heading-xl">
+                          Community transport directory
+                        </h1>
+
+                        <h2 class="govuk-heading-m">Show me schemes that only cover                    </h2>
+                      </legend>
+                      <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" onclick="show1();" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
+                          <label class="govuk-label govuk-radios__label" for="where-do-you-live-1">
                           Bath and surrounding villages
-                    </label>
-                  </div>
+                          </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="where-do-you-live-2" onclick="show2();" name="where-do-you-live" type="radio" value="scotland">
+                          <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                            Keynsham and surrounding villages
+                          </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="where-do-you-live-3" onclick="show3();" name="where-do-you-live" type="radio" value="wales">
+                          <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                                Midsomer Norton area
+                          </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="where-do-you-live-4" onclick="show4();" name="where-do-you-live" type="radio" value="northern-ireland">
+                          <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                                Chew Valley area
+                          </label>
+                        </div>
 
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
-                    <label class="govuk-label govuk-checkboxes__label" for="waste-1">
-                      Keynsham and surrounding villages
-                    </label>
-                  </div>
-
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
-                    <label class="govuk-label govuk-checkboxes__label" for="waste-1">
-                      Midsomer Norton area
-                    </label>
-                  </div>
-
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
-                    <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-                      Chew Valley area
-                    </label>
-                  </div>
-
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
-                    <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-                      Other areas
-                    </label>
-                  </div>
-
-                  
+                        <div class="govuk-radios">
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="where-do-you-live-5" onclick="show5();" name="where-do-you-live" type="radio" value="other">
+                                  <label class="govuk-label govuk-radios__label" for="where-do-you-live-5">
+                                    Other
+                                  </label>
+                                </div>
+                      </div>
+                    </fieldset>
+                    <p></p>
+                    <div id="clear-filter" style="display:none">
+                    <a href="community-transport-directory.html"  class="govuk-button">Clear filter</a>
                 </div>
-              </fieldset>
-            </div>
-    </div>
-</div>  
-<p class="govuk-body-l"><strong>Showing 11 community transport schemes</strong> </p>
-<hr>
+                  </div>
+                        
 <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-full">
+
+            <div class="all-ct" id="all-ct">  
+                    <div class="listing">
+
+                            <p class="govuk-body-l"><strong>Showing 11 community transport schemes</strong> </p>
+                            <hr>
+                            <br>
+                    <h3 class="govuk-heading-m">Age UK B&amp;NES</h3>
+                <p>Age UK B&amp;NES is a local independent charity that offers services and activities to older people throughout Bath &amp; North East Somerset.</p>
+                <p><strong>Booking for:</strong>&nbsp;Individuals and groups</p>
+                <p><strong>Type of service:</strong>&nbsp;Provides transport for AgeUK B&amp;NES&nbsp;community and social groups. The service is available to other community groups. Please contact for more details.</p>
+                <p><strong>Covers:</strong>&nbsp;The area routinely covered is Bath &amp;&nbsp;North East Somerset. Trips outside this area are made by prior arrangement.</p>
+                <a href="govuk-link">Find out more about the scheme</a>
+    
+                </div>
+                <div class="listing">
+                        <h3 class="govuk-heading-m"> Bath Community Transport</h3>
+                        <p>Provides transport for registered user groups only to take members on trips.</p>
+                        <p>Booking for:&nbsp;Groups</p>
+                        <p>Type of service:&nbsp;Fully accessible minibus service</p>
+                        <p>Covers:&nbsp;Bath &amp; North East Somerset area</p>
+                        <a href="#" class="govuk-link">Find out more about this scheme</a> 
+                </div>
+    
+                <div class="listing">
+                       <h3 class="govuk-heading-m"> Wellow Community Minibus</h3>
+                        <p>Offering journeys into Bath and back for residents of Wellow only
+                        Booking for:&nbsp;Individual(s)</p>
+                        <p> <strong>Type of service:</strong>&nbsp;Fully accessible minibus service</p>
+                        <p> <strong> Covers:</strong>&nbsp;Wellow, Bath (Riverside car park, Odd Down Park &amp; Ride, St Gregory's)</p>
+                            <a href="#">Find out more about the scheme</a>
+    
+                </div>
+    
+                <div class="listing">
+                    <h3 class="govuk-heading-m">Batheaston Neighbourhood Group</h3>
+                    <p>For people registered with Batheaston Surgery only. Offers journeys to hospital, doctors and other medical appointments.</p>
+                    <p><strong> Booking for:</strong>&nbsp;Individual(s)</p>
+                    <p><strong> Type of service:</strong>&nbsp;Door-to-door fully accessible minibus service</p>
+                    <p><strong>Covers:</strong> Batheaston, Bath</p>
+                    <a href="tel:01225859843">Call&nbsp;01225859843&nbsp;to book a journey</a>
+                </div>
+    
+                <div class="listing">
+                    <h3 class="govuk-heading-m">SWAN Volunteer Transport Scheme</h3>
+                    <p>For&nbsp; older, frail or disabled people on low&nbsp;incomes living in Bath and North East Somerset. Provides journeys for visiting friends or family, attending social activities, health related appointments, shopping, attending training or educational facilities, or simply for a trip out.
+                        </p>
+                    <p><strong>Booking for:</strong>Individual(s) and Groups</p>
+                    <p><strong>Type of service:</strong>Door-to-door fully accessible minibus service</p>
+                    <p> <strong>Covers:&nbsp;</strong> Bath &amp; North East Somerset area</p>
+                    <a href="">missing link or phone</a>
+                </div>
+    
+                <div class="listing">
+                    <h3 class="govuk-heading-m"> Fare car</h3>
+                            <p> A safe and friendly shared taxi service to and from Bath city centre at subsidised rates</p>  
+                            <p><strong>Booking for:</strong>&nbsp;Individual(s)</p>  
+                            <p><strong>Type of service:</strong>&nbsp;Shared taxi service</p>
+                            <p><strong>Covers:</strong>&nbsp;Langridge &amp; Northend, Combe Hay, Shoscombe, South Stoke &amp; Wellow</p>
+                            <a href="#">Find out more about the scheme</a> 
+                </div>
+    
+                <div class="listing">
+                    <h3 class="govuk-heading-m">Bathford Link</h3>
+                            <p>For residents of the parish of Bathford (includes Warleigh and Shockerwick) and Kingsdown. For older people and offers journeys to medical appointments, dentists, hairdressers and opticians etc.</p>
+                            <p><strong> Booking for:</strong>&nbsp;Individual(s)</p>
+                            <p><strong>Type of service:</strong>&nbsp;Fully accessible minibus service</p>
+                            <p><strong>Covers:&nbsp;Batheaston, Bath, Bristol, Shepton Mallet, Devizes</strong></p><strong>
+                            <a href="tel:07870666582">Call&nbsp;07870 666582&nbsp;to book a journey</a> 
+                </strong></div><strong>
+    
+                <div class="listing">
+                    <h3 class="govuk-heading-m">Dial-a-Ride, Bath</h3>
+                    <p>A wide range of welfare organisations augment service for the elderly, the disadvantaged and those with impaired mobility.</p>
+                    <p><strong>Booking for:&nbsp;</strong>Individual(s)</p>
+                    <p><strong>Type of service: </strong>Door-to-door fully accessible minibus service</p>
+                    <p><strong>Covers: </strong>Bath &amp; surrounding</p>
+                    <a href=""> Find out more about this scheme</a>
+    
+                </div>
+    
+                <div class="listing">
+                        <h3 class="govuk-heading-m">St Philip's Community Minibus</h3>
+                        <p>Transport for community groups and charities. Groups need to be registered with the scheme and have to provide their own driver.</p>
+                        <p><strong>Booking for:&nbsp;</strong>Groups</p>
+                        <p><strong>Type of service: </strong>Fully accessible minibus service</p>
+                        <p><strong>Covers: </strong>Bath &amp; North East Somerset area</p>
+                        <a href=""> Find out more about this scheme</a>
         
-    <div class="listing">
-        <h3 class="govuk-heading-m">Bath Dial-a-Ride</h2>
-            <p>Door-to-door, fully accessible minibus service</p>
-            <p>Primarily for older or disabled people, or any resident who cannot use public transport services.</p>
-            <p><strong>Telephone:</strong> 01225 335019 <span> <strong> Scheme type:</strong> Dial-a-Ride</span></p>
-        <p><strong>Website: </strong><a href="community-transport-bath-dial-ride.html">http://localhost:3000/templates/community-transport-bath-dial-ride.html</a> </p>
-    </div>
+                    </div>
+    
+                    <div class="listing">
+           
+                            <h3 class="govuk-heading-m">Dial-a-Ride, Keynsham and District</h3>
+                        <p>A wide range of welfare organisations augment service for the elderly, the disadvantaged and those with impaired mobility.</p>
+                        <p><strong>Booking for:</strong>&nbsp;Individual(s)</p>
+                        <p><strong>Type of service:</strong>&nbsp;Door-to-door fully accessible minibus service</p>
+                        <p><strong>Covers:</strong>&nbsp;The area routinely covered is Bath &amp;&nbsp;North East Somerset. Trips outside this area are made by prior arrangement.</p>
+                        <a href="" class="govuk-link">Find out more about the scheme</a>
+            
+                        </div>
 
-    <div class="listing">
-            <h3 class="govuk-heading-m">Keynsham &amp; District Dial-a-Ride</h3>
-            <p>Door-to-door fully accessible minibus service</p>
-            <p>Primarily for older or disabled people, or any resident who cannot use public transport services.</p>
-            <p><strong>Telephone:</strong> 01225 335019 <span><strong>Type:</strong> Dial-a-Ride</span></p>
-            <p><strong>Website: </strong><a href="community-transport-keynsham-dial-ride.html">http://localhost:3000/templates/community-transport-keynsham-dial-ride.html</a> </p>
-        </div>
+                        <div class="listing">
+                                <h3 class="govuk-heading-m">Midsomer Norton &amp; Radstock Dial-a-Ride </h3>
+                                <p>Door-to-door fully accessible minibus service</p>
+                                <p>Primarily for older or disabled people, or any resident who cannot use public transport services.</p>
+                                <p><strong>Telephone:</strong> 01225 335019 <span><strong>Type:</strong> Dial-a-Ride</span></p>
+                                <p> <strong>Website: </strong>
+                                    <a href="location-dial-ride-midsomer-norton.html">http://localhost:3000/templates/location-dial-ride-midsomer-norton.html</a> </p>
+                            </div>  
 
-        <div class="listing">
-                <h3 class="govuk-heading-m">Midsomer Norton &amp; Radstock Dial-a-Ride </h3>
-                <p>Door-to-door fully accessible minibus service</p>
-                <p>Primarily for older or disabled people, or any resident who cannot use public transport services.</p>
-                <p><strong>Telephone:</strong> 01225 335019 <span><strong>Type:</strong> Dial-a-Ride</span></p>
-                <p> <strong>Website: </strong>
-                    <a href="location-dial-ride-midsomer-norton.html">http://localhost:3000/templates/location-dial-ride-midsomer-norton.html</a> </p>
+                            <div class="listing">
+
+                                    <h3 class="govuk-heading-m">Chew Valley Community Transport</h3>
+                                    <p>Transport to medical appointments for people&nbsp;who have a medical need and no other access to transport.</p>
+                                            <p><strong>Booking for:</strong> Individual(s) across the Chew Valley area.</p>
+                                            <p><strong>Type of service:</strong> Door-to-door fully accessible minibus service</p>
+                                            <p><strong>Covers:</strong>Bath &amp; North East Somerset villages of the Chew Valley, Winford, Felton area and along the A37 to Clutton:</p>
+                                            <a href="tel:01275333430">Call&nbsp;01275333430&nbsp;to book a journey</a>
+                    
+                                </div>
+
+                    </div>
+
+
+
+            <div class="bath-ct" id="bath-ct" style="display: none;">       
+                <div class="listing">
+
+                        <p class="govuk-body-l"><strong>Showing 9 community transport schemes</strong> </p>
+                        <hr>
+                        <br>
+                <h3 class="govuk-heading-m">Age UK B&NES</h3>
+            <p>Age UK B&NES is a local independent charity that offers services and activities to older people throughout Bath & North East Somerset.</p>
+            <p><strong>Booking for:</strong> Individuals and groups</p>
+            <p><strong>Type of service:</strong> Provides transport for AgeUK B&NES community and social groups. The service is available to other community groups. Please contact for more details.</p>
+            <p><strong>Covers:</strong> The area routinely covered is Bath & North East Somerset. Trips outside this area are made by prior arrangement.</p>
+            <a href="govuk-link">Find out more about the scheme</a>
+
+            </div>
+            <div class="listing">
+                    <h3 class="govuk-heading-m"> Bath Community Transport</h3>
+                    <p>Provides transport for registered user groups only to take members on trips.</p>
+                    <p>Booking for: Groups</p>
+                    <p>Type of service: Fully accessible minibus service</p>
+                    <p>Covers: Bath & North East Somerset area</p>
+                    <a href="#" class="govuk-link">Find out more about this scheme</a> 
             </div>
 
             <div class="listing">
-                    <h3 class="govuk-heading-m">Age UK B&amp;NES</h3>
-                    <p>Minibus Service</p>
-                    <p>Age UK B&amp;NES is a charitable organisation that offers its clients transport to and from their community social groups and other age uk activities</p>
-                    <p>Telephone: 01225 335019</p>
-                    <p><a href="https://www.ageuk.org.uk/bathandnortheastsomerset/about-us/contact-us/">https://www.ageuk.org.uk/bathandnortheastsomerset/about-us/contact-us/</a> </p>
+                   <h3 class="govuk-heading-m"> Wellow Community Minibus</h3>
+                    <p>Offering journeys into Bath and back for residents of Wellow only
+                    Booking for: Individual(s)</p>
+                    <p> <strong>Type of service:</strong> Fully accessible minibus service</p>
+                    <p> <strong> Covers:</strong> Wellow, Bath (Riverside car park, Odd Down Park & Ride, St Gregory's)</p>
+                        <a href="#">Find out more about the scheme</a>
+
+            </div>
+
+            <div class="listing">
+                <h3 class="govuk-heading-m">Batheaston Neighbourhood Group</h3>
+                <p>For people registered with Batheaston Surgery only. Offers journeys to hospital, doctors and other medical appointments.</p>
+                <p><strong> Booking for:</strong> Individual(s)</p>
+                <p><strong> Type of service:</strong> Door-to-door fully accessible minibus service</p>
+                <p><strong>Covers:</strong> Batheaston, Bath</p>
+                <a href="tel:01225859843">Call 01225859843 to book a journey</a>
+            </div>
+
+            <div class="listing">
+                <h3 class="govuk-heading-m">SWAN Volunteer Transport Scheme</h3>
+                <p>For  older, frail or disabled people on low incomes living in Bath and North East Somerset. Provides journeys for visiting friends or family, attending social activities, health related appointments, shopping, attending training or educational facilities, or simply for a trip out.
+                    </p>
+                <p><strong>Booking for:</strong>Individual(s) and Groups</p>
+                <p><strong>Type of service:</strong>Door-to-door fully accessible minibus service</p>
+                <p> <strong>Covers: </strong> Bath & North East Somerset area</p>
+                <a href="">missing link or phone</a>
+            </div>
+
+            <div class="listing">
+                <h3 class="govuk-heading-m"> Fare car</h3>
+                        <p> A safe and friendly shared taxi service to and from Bath city centre at subsidised rates</p>  
+                        <p><strong>Booking for:</strong> Individual(s)</p>  
+                        <p><strong>Type of service:</strong> Shared taxi service</p>
+                        <p><strong>Covers:</strong> Langridge & Northend, Combe Hay, Shoscombe, South Stoke & Wellow</p>
+                        <a href="#">Find out more about the scheme</a> 
+            </div>
+
+            <div class="listing">
+                <h3 class="govuk-heading-m">Bathford Link</h3>
+                        <p>For residents of the parish of Bathford (includes Warleigh and Shockerwick) and Kingsdown. For older people and offers journeys to medical appointments, dentists, hairdressers and opticians etc.</p>
+                        <p><strong> Booking for:</strong> Individual(s)</p>
+                        <p><strong>Type of service:</strong> Fully accessible minibus service</p>
+                        <p><strong>Covers: Batheaston, Bath, Bristol, Shepton Mallet, Devizes</p>
+                        <a href="tel:07870666582">Call 07870 666582 to book a journey</a> 
+            </div>
+
+            <div class="listing">
+                <h3 class="govuk-heading-m">Dial-a-Ride, Bath</h3>
+                <p>A wide range of welfare organisations augment service for the elderly, the disadvantaged and those with impaired mobility.</p>
+                <p><strong>Booking for: </strong>Individual(s)</p>
+                <p><strong>Type of service: </strong>Door-to-door fully accessible minibus service</p>
+                <p><strong>Covers: </strong>Bath & surrounding</p>
+                <a href=""> Find out more about this scheme</a>
+
+            </div>
+
+            <div class="listing">
+                    <h3 class="govuk-heading-m">St Philip's Community Minibus</h3>
+                    <p>Transport for community groups and charities. Groups need to be registered with the scheme and have to provide their own driver.</p>
+                    <p><strong>Booking for: </strong>Groups</p>
+                    <p><strong>Type of service: </strong>Fully accessible minibus service</p>
+                    <p><strong>Covers: </strong>Bath & North East Somerset area</p>
+                    <a href=""> Find out more about this scheme</a>
+    
                 </div>
+
+            </div>
+
+
+
+
+<div class="keynsham-ct" id="keynsham-ct" style="display:none">
+
+        <p class="govuk-body-l"><strong>Showing 4 community transport schemes</strong> </p>
+        <hr>
+        <br>
+
+        <div class="listing">
+           
+                <h3 class="govuk-heading-m">Dial-a-Ride, Keynsham and District</h3>
+            <p>A wide range of welfare organisations augment service for the elderly, the disadvantaged and those with impaired mobility.</p>
+            <p><strong>Booking for:</strong> Individual(s)</p>
+            <p><strong>Type of service:</strong> Door-to-door fully accessible minibus service</p>
+            <p><strong>Covers:</strong> The area routinely covered is Bath & North East Somerset. Trips outside this area are made by prior arrangement.</p>
+            <a href="" class="govuk-link">Find out more about the scheme</a>
+
+            </div>
+
+        <div class="listing">
+           
+                <h3 class="govuk-heading-m">Age UK B&NES</h3>
+            <p>Age UK B&NES is a local independent charity that offers services and activities to older people throughout Bath & North East Somerset.</p>
+            <p><strong>Booking for:</strong> Individuals and groups</p>
+            <p><strong>Type of service:</strong> Provides transport for AgeUK B&NES community and social groups. The service is available to other community groups. Please contact for more details.</p>
+            <p><strong>Covers:</strong> The area routinely covered is Bath & North East Somerset. Trips outside this area are made by prior arrangement.</p>
+            <a href="govuk-link">Find out more about the scheme</a>
+
+            </div>
+
+
+                <div class="listing">
+                        <h3 class="govuk-heading-m">SWAN Volunteer Transport Scheme</h3>
+                        <p>For  older, frail or disabled people on low incomes living in Bath and North East Somerset. Provides journeys for visiting friends or family, attending social activities, health related appointments, shopping, attending training or educational facilities, or simply for a trip out.
+                            </p>
+                        <p><strong>Booking for:</strong>Individual(s) and Groups</p>
+                        <p><strong>Type of service:</strong>Door-to-door fully accessible minibus service</p>
+                        <p> <strong>Covers: </strong> Bath & North East Somerset area</p>
+                        <a href="">missing link or phone</a>
+                    </div>
 
 
                     <div class="listing">
-                            <h3 class="govuk-heading-m">Bath Community Transport </h3>
-                            <p>Minibus Service</p>
-                            <p>	A wide range of welfare organisations augment service for the elderly, the disadvantaged and those with impaired mobility</p>
-                            <p>Telephone: 01225 832317</p>
-                            <p><a href="http://www.ctonline.org.uk/providers/bath-community-transport/">http://www.ctonline.org.uk/providers/bath-community-transport/</a> </p>
+                            <h3 class="govuk-heading-m">St Philip's Community Minibus</h3>
+                            <p>Transport for community groups and charities. Groups need to be registered with the scheme and have to provide their own driver.</p>
+                            <p><strong>Booking for: </strong>Groups</p>
+                            <p><strong>Type of service: </strong>Fully accessible minibus service</p>
+                            <p><strong>Covers: </strong>Bath & North East Somerset area</p>
+                            <a href=""> Find out more about this scheme</a>
+            
                         </div>
+                
+                
+                
+                
+                
+                
 
 
+
+</div>
+
+    <div class="midsomer-norton-ct" id="midsomer-norton-ct" style="display:none">
+
+
+            <p class="govuk-body-l"><strong>Showing 4 community transport schemes</strong> </p>
+            <hr>
+            <br>
+
+            <div class="listing">
+                    <h3 class="govuk-heading-m">Midsomer Norton &amp; Radstock Dial-a-Ride </h3>
+                    <p>Door-to-door fully accessible minibus service</p>
+                    <p>Primarily for older or disabled people, or any resident who cannot use public transport services.</p>
+                    <p><strong>Telephone:</strong> 01225 335019 <span><strong>Type:</strong> Dial-a-Ride</span></p>
+                    <p> <strong>Website: </strong>
+                        <a href="location-dial-ride-midsomer-norton.html">http://localhost:3000/templates/location-dial-ride-midsomer-norton.html</a> </p>
+                </div>
+                
+                <div class="listing">
+           
+                        <h3 class="govuk-heading-m">Age UK B&NES</h3>
+                    <p>Age UK B&NES is a local independent charity that offers services and activities to older people throughout Bath & North East Somerset.</p>
+                    <p><strong>Booking for:</strong> Individuals and groups</p>
+                    <p><strong>Type of service:</strong> Provides transport for AgeUK B&NES community and social groups. The service is available to other community groups. Please contact for more details.</p>
+                    <p><strong>Covers:</strong> The area routinely covered is Bath & North East Somerset. Trips outside this area are made by prior arrangement.</p>
+                    <a href="govuk-link">Find out more about the scheme</a>
+        
+                    </div>
+
+                <div class="listing">
+                        <h3 class="govuk-heading-m">SWAN Volunteer Transport Scheme</h3>
+                        <p>For  older, frail or disabled people on low incomes living in Bath and North East Somerset. Provides journeys for visiting friends or family, attending social activities, health related appointments, shopping, attending training or educational facilities, or simply for a trip out.
+                            </p>
+                        <p><strong>Booking for:</strong>Individual(s) and Groups</p>
+                        <p><strong>Type of service:</strong>Door-to-door fully accessible minibus service</p>
+                        <p> <strong>Covers: </strong> Bath & North East Somerset area</p>
+                        <a href="">missing link or phone</a>
+                    </div>
+
+
+                    <div class="listing">
+                            <h3 class="govuk-heading-m">St Philip's Community Minibus</h3>
+                            <p>Transport for community groups and charities. Groups need to be registered with the scheme and have to provide their own driver.</p>
+                            <p><strong>Booking for: </strong>Groups</p>
+                            <p><strong>Type of service: </strong>Fully accessible minibus service</p>
+                            <p><strong>Covers: </strong>Bath & North East Somerset area</p>
+                            <a href=""> Find out more about this scheme</a>
+            
+                        </div>
+    
+
+
+        </div>
+
+        <div class="chew-ct" id="chew-ct" style="display:none">
+
+                <p class="govuk-body-l"><strong>Showing 4 community transport schemes</strong> </p>
+                <hr>
+                <br>
+
+            <div class="listing">
+
+                <h3 class="govuk-heading-m">Chew Valley Community Transport</h3>
+                <p>Transport to medical appointments for people who have a medical need and no other access to transport.</p>
+                        <p><strong>Booking for:</strong> Individual(s) across the Chew Valley area.</p>
+                        <p><strong>Type of service:</strong> Door-to-door fully accessible minibus service</p>
+                        <p><strong>Covers:</strong>Bath & North East Somerset villages of the Chew Valley, Winford, Felton area and along the A37 to Clutton:</p>
+                        <a href="tel:01275333430">Call 01275333430 to book a journey</a>
+
+            </div>
+        
+                <div class="listing">
+           
+                        <h3 class="govuk-heading-m">Age UK B&NES</h3>
+                    <p>Age UK B&NES is a local independent charity that offers services and activities to older people throughout Bath & North East Somerset.</p>
+                    <p><strong>Booking for:</strong> Individuals and groups</p>
+                    <p><strong>Type of service:</strong> Provides transport for AgeUK B&NES community and social groups. The service is available to other community groups. Please contact for more details.</p>
+                    <p><strong>Covers:</strong> The area routinely covered is Bath & North East Somerset. Trips outside this area are made by prior arrangement.</p>
+                    <a href="govuk-link">Find out more about the scheme</a>
+        
+                    </div>
+
+                <div class="listing">
+                        <h3 class="govuk-heading-m">SWAN Volunteer Transport Scheme</h3>
+                        <p>For  older, frail or disabled people on low incomes living in Bath and North East Somerset. Provides journeys for visiting friends or family, attending social activities, health related appointments, shopping, attending training or educational facilities, or simply for a trip out.
+                            </p>
+                        <p><strong>Booking for:</strong>Individual(s) and Groups</p>
+                        <p><strong>Type of service:</strong>Door-to-door fully accessible minibus service</p>
+                        <p> <strong>Covers: </strong> Bath & North East Somerset area</p>
+                        <a href="">missing link or phone</a>
+                    </div>
+
+
+                    <div class="listing">
+                            <h3 class="govuk-heading-m">St Philip's Community Minibus</h3>
+                            <p>Transport for community groups and charities. Groups need to be registered with the scheme and have to provide their own driver.</p>
+                            <p><strong>Booking for: </strong>Groups</p>
+                            <p><strong>Type of service: </strong>Fully accessible minibus service</p>
+                            <p><strong>Covers: </strong>Bath & North East Somerset area</p>
+                            <a href=""> Find out more about this scheme</a>
+            
+                        </div>
+        
+    
+            </div>
+
+            <div class="other-ct" id="other-ct" style="display:none">
+            
+            
+                    <div class="listing">
+           
+                            <h3 class="govuk-heading-m">Age UK B&NES</h3>
+                        <p>Age UK B&NES is a local independent charity that offers services and activities to older people throughout Bath & North East Somerset.</p>
+                        <p><strong>Booking for:</strong> Individuals and groups</p>
+                        <p><strong>Type of service:</strong> Provides transport for AgeUK B&NES community and social groups. The service is available to other community groups. Please contact for more details.</p>
+                        <p><strong>Covers:</strong> The area routinely covered is Bath & North East Somerset. Trips outside this area are made by prior arrangement.</p>
+                        <a href="govuk-link">Find out more about the scheme</a>
+            
+                        </div>
+    
+                    <div class="listing">
+                            <h3 class="govuk-heading-m">SWAN Volunteer Transport Scheme</h3>
+                            <p>For  older, frail or disabled people on low incomes living in Bath and North East Somerset. Provides journeys for visiting friends or family, attending social activities, health related appointments, shopping, attending training or educational facilities, or simply for a trip out.
+                                </p>
+                            <p><strong>Booking for:</strong>Individual(s) and Groups</p>
+                            <p><strong>Type of service:</strong>Door-to-door fully accessible minibus service</p>
+                            <p> <strong>Covers: </strong> Bath & North East Somerset area</p>
+                            <a href="">missing link or phone</a>
+                        </div>
+    
+    
                         <div class="listing">
-                                <h3 class="govuk-heading-m">Midsomer Norton Community Vehicle Trust</h3>
-                                <p>Minibus Service</p>
-                                <p>Provide group transport to older and disabled people increasing their independence and confidence.</p>
-                                <p>Telephone: 01225 335019</p>
-                                <p><a href="http://www.bathnes.gov.uk/services/parking-and-travel/community-transport/list-schemes/midsomer-norton-radstock-community-serv">http://www.bathnes.gov.uk/services/parking-and-travel/community-transport/list-schemes/midsomer-norton-radstock-community-serv</a> </p>
+                                <h3 class="govuk-heading-m">St Philip's Community Minibus</h3>
+                                <p>Transport for community groups and charities. Groups need to be registered with the scheme and have to provide their own driver.</p>
+                                <p><strong>Booking for: </strong>Groups</p>
+                                <p><strong>Type of service: </strong>Fully accessible minibus service</p>
+                                <p><strong>Covers: </strong>Bath & North East Somerset area</p>
+                                <a href=""> Find out more about this scheme</a>
+                
                             </div>
+                </div>
+
+</div>
 
 
-                            <div class="listing">
-                                    <h3 class="govuk-heading-m">St Phillip's Community Minibus</h3>
-                                    <p>Minibus Service</p>
-                                    <p>Transport for older and disabled people, as well as ethnic minorities in top ten multiple deprivation wards in B&amp;NES.</p>
-                                    <p>Telephone: 01225 335019</p>
-                                    
-                                    <p><a href="https://www.stphilipstjames.org/community-work/minibus.html">https://www.stphilipstjames.org/community-work/minibus.html</a> </p>
-                                </div>
-
-
-                                <div class="listing">
-                                        <h3 class="govuk-heading-m">Wellow Community Minibus</h3><p>Minibus Service</p>
-                                        <p>Available to residents of Wellow.</p>
-                                        <p>Telephone: 01225 335019</p>
-                                        <p><a href="http://www.wellowparish.info/Group&Societies/Wellow%20Community%20Minibus.htm">http://www.wellowparish.info/Group&Societies/Wellow%20Community%20Minibus.htm</a> </p>
-                                    </div>
-
-
-                                    <div class="listing">
-                                            <h3 class="govuk-heading-m">Batheaston Neighbourhood Group</h3>
-                                            <p>Car Scheme</p>
-                                            <p>Transport for older and disabled people to the Medical Centre, RUH and other medical trips as well as shopping trips for the housebound.</p>
-                                            <p>Telephone: 01225 335019</p>
-                                            <p><a href="https://batheaston.org/batheaston-neighbourhood-group/">https://batheaston.org/batheaston-neighbourhood-group/</a> </p>
-                                        </div>
-
-
-                                        <div class="listing">
-                                                <h3 class="govuk-heading-m">Chew Valley Community Transport</h3>
-                                                <p> Car Scheme</p>
-                                                <p>Available to residents of the Chew Valley to get to medical appointments.</p>
-                                                <p>Telephone: 01225 335019</p>
-                                                <p><a href="http://www.bathnes.gov.uk/services/parking-and-travel/community-transport/list-schemes/chew-valley-community-transport">http://www.bathnes.gov.uk/services/parking-and-travel/community-transport/list-schemes/chew-valley-community-transport</a> </p>
-                                            </div>
-
-
-                                            <div class="listing">
-                                                    <h3 class="govuk-heading-m">SWAN Volunteer Transport Scheme</h3>
-                                                    <p>Car Scheme</p>
-                                                    <p>Transport for older, disabled people and families on low income who are unable to access conventional public transport. Providing all social and health journeys across BATHNES. Increasing wellbeing and independence. Decreasing loneliness and isolation.</p>
-                                                    <p>Telephone: 01225 335019</p>
-                                                    <p><a href="http://swan.btck.co.uk/">http://swan.btck.co.uk/</a> </p>
-                                                </div>
-    </div>
 
 
     <div class="govuk-grid-column-one-third">
