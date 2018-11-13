@@ -1,0 +1,119 @@
+---
+Title: None of these apply (disabled bus pass)
+Breadcrumb1_url: section-parking.html
+Breadcrumb1_title: Parking & Travel
+Breadcrumb2_url: bus-passes-diamond-travelcard.html
+Breadcrumb2_title: Free bus pass (Diamond Travelcard)
+---
+
+            <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-full">
+                        {{> breadcrumb.lv-three-breadcrumb}}
+                    </div>
+                </div>
+
+            <div class="govuk-grid-row"> 
+                    <div class="govuk-grid-column-two-thirds">  
+                            
+                        <h1 class="govuk-heading-xl">{{Title}}</h1>
+						
+						<form id="disabled-buspass"  action="bus-passes-disabled-z.html">
+							<div class="govuk-form-group">
+								<fieldset class="govuk-fieldset">
+								  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+											<p class="govuk-body-l">You are not automatically eligible for a disabled person’s bus pass. You may still be eligible if you meet one of these criteria.</p>
+								  </legend>
+								  <div class="govuk-radios">
+									<div class="govuk-radios__item">
+									  <input class="govuk-radios__input" id="eligibility-1" name="eligibility" type="radio" value="blind">
+									  <label class="govuk-label govuk-radios__label" for="eligibility-1">
+											I am registered blind or partially sighted
+									  </label>
+									</div>
+									<div class="govuk-radios__item">
+									  <input class="govuk-radios__input" id="eligibility-2" name="eligibility" type="radio" value="deaf">
+									  <label class="govuk-label govuk-radios__label" for="eligibility-2">
+											I am profoundly or severely deaf
+									  </label>
+									</div>
+									<div class="govuk-radios__item">
+									  <input class="govuk-radios__input" id="eligibility-3" name="eligibility" type="radio" value="speech">
+									  <label class="govuk-label govuk-radios__label" for="eligibility-3">
+											I am without speech
+									  </label>
+									</div>
+									<div class="govuk-radios__item">
+									  <input class="govuk-radios__input" id="eligibility-4" name="eligibility" type="radio" value="mobility">
+									  <label class="govuk-label govuk-radios__label" for="mobility-4">
+											I have a disability or injury that means I can’t walk or find walking difficult
+										</label>
+									</div>
+									<div class="govuk-radios__item">
+										<input class="govuk-radios__input" id="eligibility-5" name="eligibility" type="radio" value="arms">
+										<label class="govuk-label govuk-radios__label" for="eligibility-5">
+												I do not have arms or have long term loss the use of both arms
+										</label>
+										</div>
+										<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="eligibility-6" name="eligibility" type="radio" value="learning">
+												<label class="govuk-label govuk-radios__label" for="eligibility-6">
+												I have a learning disability
+												</label>
+										</div>
+										<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="eligibility-7" name="eligibility" type="radio" value="unfit">
+												<label class="govuk-label govuk-radios__label" for="eligibility-7">
+												I am medically unfit to drive
+												</label>
+										</div>
+										<div class="govuk-radios__item">
+												<input class="govuk-radios__input" id="eligibility-8" name="eligibility" type="radio" value="none">
+												<label class="govuk-label govuk-radios__label" for="eligibility-8">
+												None of these apply	
+												</label>
+										</div>
+								  </div>
+								</fieldset>
+							  </div>
+							  <a href="bus-passes-disabled.html" class="govuk-button">Back</a>&nbsp;<input type="submit" id="go" class="govuk-button" value="Continue" />	
+							
+							  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+							  <script>
+								
+								$('#disabled-buspass').submit(function(){
+									if ($('input[name=eligibility]:checked').val() == 'blind'){
+										$('#disabled-buspass').attr("action", "bus-passes-disabled-blind.html");
+									}
+									else if ($('input[name=eligibility]:checked').val() == 'deaf'){$('#disabled-buspass').attr("action", "bus-passes-disabled-deaf.html");
+									}
+									else if  ($('input[name=eligibility]:checked').val() == 'speech'){$('#disabled-buspass').attr("action", "bus-passes-disabled-speech.html");
+									}
+									else if  ($('input[name=eligibility]:checked').val() == 'mobility'){$('#disabled-buspass').attr("action", "bus-passes-disabled-mobility.html");
+									}
+									else if  ($('input[name=eligibility]:checked').val() == 'arms'){$('#disabled-buspass').attr("action", "bus-passes-disabled-arms.html");
+									}
+									else if  ($('input[name=eligibility]:checked').val() == 'learning'){$('#disabled-buspass').attr("action", "bus-passes-disabled-learning.html");
+									}
+									else if  ($('input[name=eligibility]:checked').val() == 'unfit'){$('#disabled-buspass').attr("action", "bus-passes-disabled-unfit.html");
+									}
+									else {
+										$('#disabled-buspass').attr("action","bus-passes-disabled-none-none.html");
+									}
+    							
+								});
+								
+							  </script>
+
+						</form>
+						          
+        
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+            <aside class="aside" role="complementary">            
+         
+        </aside>
+    </div>
+
+    
+</div>
